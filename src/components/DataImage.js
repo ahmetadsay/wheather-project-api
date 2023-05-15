@@ -6,7 +6,13 @@ export const getImages = async (query) => {
   const response = await fetch(`${API_URL}&query=${query}`);
   const json = await response.json();
 
-  console.log(json);
+  
+  const dataResult = json.results 
+  console.log(dataResult);
+
+  return dataResult
 };
+
+getImages()
 
 export default getImages
