@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import getImages from './DataImage';
+import '/Users/ahmet/Desktop/Development/wheather-api/src/components/App.css'
+
 
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
@@ -38,20 +40,21 @@ const Slider = () => {
   }
 
   return (
-    <>
-      <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-      <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
+    < div className='relative' >
+     
       {urlDatas.map((slide, index) => (
-        <div
-          className={index === current ? 'slide active' : 'slide'}
-          key={index}
-        >
-          {index === current && (
-            <img  src={slide.imageData} alt='travel image' className='image' />
-          )}
-        </div>
+    <div className={index === current ? 'slide active' : 'slide'} key={index}>
+    <div className="slider-wrapper">
+      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
+      {index === current && (
+        <img src={slide.imageData} alt="travel image" className="  rounded-2xl w-[30rem] h-80 " />
+      )}
+      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+    </div>
+  </div>
+  
       ))}
-    </>
+    </div>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import '../components/App.css'
 
 
 
@@ -22,8 +23,8 @@ export default function UserInput() {
     
 
     return (
-      <div>
-      <div className="   ">
+        <div className="backdrop-blur-xl bg-white/5  ">
+      <div >
         <h1>Whats on your mind today?</h1>
         <input 
         className="" 
