@@ -40,21 +40,20 @@ const Slider = () => {
   }
 
   return (
-    < div className='relative' >
-     
-      {urlDatas.map((slide, index) => (
-    <div className={index === current ? 'slide active' : 'slide'} key={index}>
-    <div className="slider-wrapper">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      {index === current && (
-        <img src={slide.imageData} alt="travel image" className="  rounded-2xl w-[30rem] h-80 " />
-      )}
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-    </div>
+    <div className='relative'>
+    {urlDatas.map((slide, index) => (
+      <div className={index === current ? 'slide active' : 'slide'} key={index}>
+        <div className="slider-wrapper">
+          <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
+          {index === current && (
+            <img src={slide.imageData} alt="travel image" className="rounded-2xl w-[40rem] h-96" />
+          )}
+          <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+        </div>
+      </div>
+    ))}
   </div>
-  
-      ))}
-    </div>
+    
   );
 };
 
