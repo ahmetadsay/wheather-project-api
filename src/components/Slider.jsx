@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import getImages from './DataImage';
+import getImages from './Data/DataImage';
 import '/Users/ahmet/Desktop/Development/wheather-api/src/components/App.css'
 
 

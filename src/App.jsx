@@ -1,5 +1,5 @@
-import GetWeatherData from "./components/ApiRequest"
-import getImages from "./components/DataImage"
+import GetWeatherData from "./components/Data/ApiRequest"
+import getImages from "./components/Data/DataImage"
 import UserInput from "./components/UserInput"
 import Slider from "./components/slider"
 
